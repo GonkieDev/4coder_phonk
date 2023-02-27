@@ -12,6 +12,7 @@ Phonk should be used with Ryan Fleury's custom layer (https://github.com/Dion-Sy
 - Goto the file `4coder_fleury.cpp` 
 - Add `#include "phonk/4coder_phonk.cpp"` below all the `#includes`'s
 - Within the `custom_layer_init` function replace or `#if 0` all the lines that set the bindings and dyanmic bindings with `PK_SetupBindings(app);`
+- Within the `CUSTOM_COMMAND_SIG(fleury_startup)` replace `default_4coder_initialize(app, file_names);` with `PK_DefaultInitialize(app, file_names, 0, 0);`
 
 #### How to build
 - `build.bat` in `custom/4coder_fleury`
